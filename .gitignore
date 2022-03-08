@@ -1,5 +1,5 @@
 dist/*
-!dist/atomic-calendar-revive.js
+!dist/atomic-calendar-revive-jayknott.js
 
 # Logs
 logs

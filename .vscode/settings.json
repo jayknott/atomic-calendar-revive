@@ -64,7 +64,21 @@
     "yaml",
     "yml"
   ],
-  "cSpell.words": ["cer", "ddd", "DDTHH", "Hass", "jsnext", "knott", "listbox", "LLL", "mdc", "mdi", "MMM", "mwc"],
+  "cSpell.words": [
+    "cer",
+    "ddd",
+    "DDTHH",
+    "Hass",
+    "jayknott",
+    "jsnext",
+    "knott",
+    "listbox",
+    "LLL",
+    "mdc",
+    "mdi",
+    "MMM",
+    "mwc"
+  ],
   "todo-tree.filtering.includeHiddenFiles": true,
   "todo-tree.filtering.ignoreGitSubmodules": true,
   "todo-tree.filtering.excludeGlobs": ["node_modules/**/*"],

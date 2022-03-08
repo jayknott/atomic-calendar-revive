@@ -40,7 +40,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      file: './dist/atomic-calendar-revive.js',
+      file: './dist/atomic-calendar-revive-jayknott.js',
       format: 'es',
     },
     plugins: [...plugins],

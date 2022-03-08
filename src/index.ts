@@ -1,4 +1,4 @@
-﻿import { CSSResult, html, LitElement, TemplateResult } from 'lit';
+﻿import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { HomeAssistant, LovelaceCardEditor } from 'custom-card-helpers';
