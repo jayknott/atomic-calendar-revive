@@ -29,13 +29,13 @@ import { atomicCardConfig, atomicCustomConfig, CalendarEntity, DisplayStyle, Has
 
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: 'atomic-calendar-revive-2',
-  name: 'Atomic Calendar Revive 2',
+  type: 'atomic-calendar-revive-jayknott',
+  name: 'Atomic Calendar Revive Jayknott',
   preview: true,
   description: localize('common.description'),
 });
 
-@customElement('atomic-calendar-revive-2')
+@customElement('atomic-calendar-revive-jayknott')
 export class AtomicCalendarRevive extends LitElement {
   @property({ type: Object }) private _config!: atomicCardConfig;
   @property() private content?: TemplateResult | TemplateResult[] | string;
@@ -79,7 +79,7 @@ export class AtomicCalendarRevive extends LitElement {
   }
 
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
-    return document.createElement('atomic-calendar-revive-2-editor') as LovelaceCardEditor;
+    return document.createElement('atomic-calendar-revive-jayknott-editor') as LovelaceCardEditor;
   }
 
   public static getStubConfig() {

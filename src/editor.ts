@@ -103,7 +103,7 @@ const options: ConfigCategoryCatalog = {
   },
 };
 
-@customElement('atomic-calendar-revive-2-editor')
+@customElement('atomic-calendar-revive-jayknott-editor')
 export class AtomicCalendarReviveEditor2 extends LitElement implements LovelaceCardEditor {
   @property({ attribute: false }) public hass?: HomeAssistant;
   @state() private _config!: atomicCardConfig;

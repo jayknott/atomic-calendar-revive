@@ -40,7 +40,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      file: './dist/atomic-calendar-revive-2.js',
+      file: './dist/atomic-calendar-revive.js',
       format: 'es',
     },
     plugins: [...plugins],
