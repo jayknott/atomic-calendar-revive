@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 
 services:
   app:
@@ -8,14 +8,14 @@ services:
       - ..:/workspaces/atomic-calendar-revive
       # Map users settings
       - ~/.ssl:/.ssl/
-      - ~/.ssh:/home/vscode/.ssh/
-      - ~/.gitconfig:/home/vscode/.gitconfig
-      - ~/.netrc:/home/vscode/.netrc
+      - ~/.ssh:/root/.ssh/
+      - ~/.gitconfig:/root/.gitconfig
+      - ~/.netrc:/root/.netrc
       # Allow XServer for WSLg
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /mnt/wslg:/mnt/wslg
     ports:
-      - "5000:5000"
+      - '5000:5000'
     # Keeps the server open
     tty: true
     environment:
