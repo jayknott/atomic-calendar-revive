@@ -1,0 +1,90 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "javascript.validate.enable": false,
+  // "typescript.validate.enable": false,
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "indentRainbow.ignoreErrorLanguages": ["markdown"],
+  "cSpell.minWordLength": 3,
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".devcontainer",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "mdx",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "cSpell.words": ["cer", "ddd", "DDTHH", "Hass", "jsnext", "knott", "listbox", "LLL", "mdc", "mdi", "MMM", "mwc"],
+  "todo-tree.filtering.includeHiddenFiles": true,
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "todo-tree.filtering.excludeGlobs": ["node_modules/**/*"],
+  "todo-tree.general.tags": ["TODO", "BUG", "SECURITY"],
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "type": "text",
+      "icon": "alert",
+      "background": "#606000",
+      "foreground": "#CCC",
+      "iconColour": "yellow",
+      "gutterIcon": true
+    },
+    "SECURITY": {
+      "type": "text",
+      "icon": "alert",
+      "background": "#600000",
+      "foreground": "#CCC",
+      "iconColour": "red",
+      "gutterIcon": true
+    }
+  }
+}

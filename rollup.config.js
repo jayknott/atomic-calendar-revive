@@ -1,64 +1,48 @@
 import typescript from 'rollup-plugin-typescript2';
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
-import { terser } from "rollup-plugin-terser";
+import commonjs from 'rollup-plugin-commonjs';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import babel from 'rollup-plugin-babel';
+import { terser } from 'rollup-plugin-terser';
+import serve from 'rollup-plugin-serve';
 import json from '@rollup/plugin-json';
-import eslint from '@rollup/plugin-eslint';
+import * as fs from 'fs';
+
+const dev = process.env.ROLLUP_WATCH;
+
+const serveOpts = {
+  contentBase: ['./dist'],
+  host: '0.0.0.0',
+  port: 5000,
+  allowCrossOrigin: true,
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
+  https: {
+    key: fs.readFileSync('/.ssl/knott_life_2020_key.pem'),
+    cert: fs.readFileSync('/.ssl/knott_life_2020_cer.pem'),
+    ca: fs.readFileSync('/.ssl/knott_life_2020_cer_chain.pem'),
+  },
+};
 
 const plugins = [
-	nodeResolve({
-		jsnext: true,
-		main: true,
-	}),
-	eslint(),
-	commonjs(),
-	typescript(),
-	json(),
-	babel({
-		exclude: 'node_modules/**',
-		babelHelpers: 'bundled',
-		compact: true,
-		extensions: [
-			'.js',
-			'.ts',
-		],
-		presets: [
-			[
-				'@babel/env',
-				{
-					"modules": false,
-					"targets": "> 2.5%, not dead"
-				}
-			],
-		],
-		plugins: [
-			[
-				"@babel/plugin-proposal-decorators",
-				{
-					"legacy": true
-				}
-			],
-			[
-				"@babel/plugin-proposal-class-properties"
-			],
-			[
-				"@babel/plugin-transform-template-literals"
-			]
-		]
-	}),
-	terser(),
+  nodeResolve({ jsnext: true, main: true }),
+  commonjs(),
+  typescript(),
+  json(),
+  babel({
+    exclude: 'node_modules/**',
+  }),
+  dev && serve(serveOpts),
+  !dev && terser(),
 ];
 
-export default {
-	input: ['./src/index.ts'],
-	output: {
-		file: './dist/atomic-calendar-revive.js',
-		format: 'iife',
-		compact: true,
-	},
-	watch: {
-		clearScreen: false,
-	},
-	plugins: [...plugins],
-};
+export default [
+  {
+    input: 'src/index.ts',
+    output: {
+      file: './dist/atomic-calendar-revive-2.js',
+      format: 'es',
+    },
+    plugins: [...plugins],
+  },
+];

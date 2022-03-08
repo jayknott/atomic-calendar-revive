@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  app:
+    image: mcr.microsoft.com/vscode/devcontainers/typescript-node:14
+    volumes:
+      # Change to reflect the workspace directory
+      - ..:/workspaces/atomic-calendar-revive
+      # Map users settings
+      - ~/.ssl:/.ssl/
+      - ~/.ssh:/home/vscode/.ssh/
+      - ~/.gitconfig:/home/vscode/.gitconfig
+      - ~/.netrc:/home/vscode/.netrc
+      # Allow XServer for WSLg
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    ports:
+      - "5000:5000"
+    # Keeps the server open
+    tty: true
+    environment:
+      # Allow XServer for WSLg
+      - DISPLAY=:0
+      - WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR
+      - PULSE_SERVER

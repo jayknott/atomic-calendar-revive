@@ -1,3 +1,5 @@
+import { Language, TranslationCatalog } from '../types';
+
 import * as da from './languages/da.json';
 import * as de from './languages/de.json';
 import * as en from './languages/en.json';
@@ -7,32 +9,33 @@ import * as nb from './languages/nb.json';
 import * as sl from './languages/sl.json';
 import * as sv from './languages/sv.json';
 
-const languages: any = {
-	da: da,
-	de: de,
-	en: en,
-	et: et,
-	fr: fr,
-	nb: nb,
-	sl: sl,
-	sv: sv,
+const translationCatalog: TranslationCatalog = {
+  da,
+  de,
+  en,
+  et,
+  fr,
+  nb,
+  sl,
+  sv,
 };
 
 export function localize(string: string, search = '', replace = '') {
-	const lang = (localStorage.getItem('selectedLanguage') || 'en').replace(/['"]+/g, '').replace('-', '_');
+  const lang = (localStorage.getItem('selectedLanguage') || 'en').replace(/['"]+/g, '').replace('-', '_') as Language;
 
-	let translated: string;
+  let translated = '';
 
-	try {
-		translated = string.split('.').reduce((o, i) => o[i], languages[lang]);
-	} catch (e) {
-		translated = string.split('.').reduce((o, i) => o[i], languages['en']);
-	}
+  try {
+    translated = string.split('.').reduce((o, i) => o[i], translationCatalog[lang]) as unknown as string;
+  } catch {
+    // do nothing, an empty translation will use english
+  }
 
-	if (translated === undefined) translated = string.split('.').reduce((o, i) => o[i], languages['en']);
+  if (!translated) translated = string.split('.').reduce((o, i) => o[i], translationCatalog.en) as unknown as string;
 
-	if (search !== '' && replace !== '') {
-		translated = translated.replace(search, replace);
-	}
-	return translated;
+  if (search !== '' && replace !== '') {
+    translated = translated.replace(search, replace);
+  }
+
+  return translated;
 }

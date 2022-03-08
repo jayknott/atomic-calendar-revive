@@ -1,97 +1,99 @@
 {
-	"common": {
-		"version": "Versjon",
-		"show_warning": "Vis Advarsel",
-		"error": "Feil",
-		"description": "Et avansert kalenderkort for Home Assistant med Lovelace",
-		"fullDayEventText": "Hele dagen",
-		"untilText": "Inntil",
-		"noEventText": "Ingen hendelser",
-		"noEventsForNextDaysText": "Ingen hendelser de nærmeste dager",
-		"hiddenEventText": "hendelser er skjulte"
-	},
-	"ui": {
-		"common": {
-			"previous": "Forrige",
-			"next": "Neste"
-		}
-	},
-	"errors": {
-		"invalid_configuration": "Ugyldig konfigurasjon",
-		"update_card": "Kalenderen kan ikke bli hentet fra Home Assistant komponenten",
-		"no_entities": "Du har ikke valgt noen entiteter"
-	},
-	"required": {
-		"name": "Obligatorisk",
-		"secondary": "Obligatoriske valg for at atomic-calendar-revive skal virke"
-	},
-	"main": {
-		"name": "Hovedvalg",
-		"secondary": "Valg som virker globalt",
-		"fields": {
-			"name": "Navn",
-			"showColors": "Vis Farger",
-			"maxDaysToShow": "Maksimum antall dager å vise",
-			"showLocation": "Vis lokasjonsikon",
-			"showLoader": "Vis animasjon ved innlasting",
-			"showDate": "Vis dato på kort",
-			"showDeclined": "Vis avviste hendelser",
-			"sortByStartTime": "Sortér på starttid",
-			"hideFinishedEvents": "Skjul avsluttede hendelser",
-			"dateFormat": "Datoformat",
-			"hoursFormat": "Timesformat",
-			"defaultMode": "Standardmodus",
-			"linkTarget": "Lenkemål",
-			"refreshInterval": "Oppdateringsintervall",
-			"showRelativeTime": "Vis den relative tiden",
-			"firstDayOfWeek": "Første dag i uken 0-6",
-			"cardHeight": "Høyde på kort",
-			"hideDuplicates": "Skjul duplikater"
-		}
-	},
-	"event": {
-		"name": "Hendelsesmodus",
-		"secondary": "Innstillinger for hendelsesmodus",
-		"fields": {
-			"showCurrentEventLine": "Vis en linje før hendelse?",
-			"showProgressBar": "Vis fremdriftsindikator?",
-			"showMonth": "Vis måned?",
-			"showWeekDay": "Vis ukedag?",
-			"showDescription": "Vis beskrivelse?",
-			"disableEventLink": "Fjern lenke i hendelsestittel?",
-			"disableLocationLink": "Fjern lenke til plassering?",
-			"showNoEventsForToday": "Vis Ingen hendelser i dag?",
-			"showFullDayProgress": "Vis fremdrift på heldagshendelse?",
-			"untilText": "Inntil tekst:",
-			"noEventText": "Hvis ingen hendelse, vis tekst:",
-			"noEventsForNextDaysText": "Ingen hendelser de nærmeste dager tekst:",
-			"fullDayEventText": "Heldagshendelse tekst:",
-			"showEventIcon": "Vis hendelsesikon",
-			"showHiddenText": "Vis skjult hendelsestekst?",
-			"hiddenEventText": "Tekst for skjulte hendelser:"
-		}
-	},
-	"calendar": {
-		"name": "Kalendermodus",
-		"secondary": "Innstillinger for kalendermodus",
-		"fields": {
-			"showLastCalendarWeek": "Vis forrige uke",
-			"disableCalEventLink": "Fjern kalenderhendelseslenke",
-			"disableCalLocationLink": "Fjern kalenderposisjonslenke",
-			"calShowDescription": "Vis beskrivelse",
-			"disableCalLink": "Fjern kalenderlenke"
-		}
-	},
-	"appearance": {
-		"name": "Utseende",
-		"secondary": "Personlige farger, osv.",
-		"main": {
-			"name": "Hovedvalg",
-			"secondary": "Valg som virker globalt"
-		},
-		"fields": {
-			"locationLinkColor": "Farge for posjonslenke:",
-			"dimFinishedEvents": "Tone ned avsluttede hendelser?"
-		}
-	}
+  "common": {
+    "version": "Versjon",
+    "show_warning": "Vis Advarsel",
+    "error": "Feil",
+    "description": "Et avansert kalenderkort for Home Assistant med Lovelace",
+    "fullDayEventText": "Hele dagen",
+    "untilText": "Inntil",
+    "noEventText": "Ingen hendelser",
+    "noEventsForNextDaysText": "Ingen hendelser de nærmeste dager",
+    "hiddenEventText": "hendelser er skjulte"
+  },
+  "ui": {
+    "common": {
+      "previous": "Forrige",
+      "next": "Neste"
+    }
+  },
+  "errors": {
+    "invalid_configuration": "Ugyldig konfigurasjon",
+    "update_card": "Kalenderen kan ikke bli hentet fra Home Assistant komponenten",
+    "no_entities": "Du har ikke valgt noen entiteter"
+  },
+  "required": {
+    "name": "Obligatorisk",
+    "secondary": "Obligatoriske valg for at atomic-calendar-revive skal virke"
+  },
+  "main": {
+    "name": "Hovedvalg",
+    "secondary": "Valg som virker globalt",
+    "fields": {
+      "name": "Navn",
+      "showColors": "Vis Farger",
+      "maxDaysToShow": "Maksimum antall dager å vise",
+      "showLocation": "Vis lokasjonsikon",
+      "showLoader": "Vis animasjon ved innlasting",
+      "showDate": "Vis dato på kort",
+      "showDeclined": "Vis avviste hendelser",
+      "sortByStartTime": "Sortér på starttid",
+      "hideFinishedEvents": "Skjul avsluttede hendelser",
+      "dateFormat": "Datoformat",
+      "hoursFormat": "Timesformat",
+      "defaultMode": "Standardmodus",
+      "displayStyle": "Display style",
+      "linkTarget": "Lenkemål",
+      "refreshInterval": "Oppdateringsintervall",
+      "showRelativeTime": "Vis den relative tiden",
+      "firstDayOfWeek": "Første dag i uken 0-6",
+      "cardHeight": "Høyde på kort",
+      "hideDuplicates": "Skjul duplikater"
+    }
+  },
+  "event": {
+    "name": "Hendelsesmodus",
+    "secondary": "Innstillinger for hendelsesmodus",
+    "fields": {
+      "showCurrentEventLine": "Vis en linje før hendelse?",
+      "showProgressBar": "Vis fremdriftsindikator?",
+      "showMonth": "Vis måned?",
+      "showWeekDay": "Vis ukedag?",
+      "showDescription": "Vis beskrivelse?",
+      "disableEventLink": "Fjern lenke i hendelsestittel?",
+      "disableLocationLink": "Fjern lenke til plassering?",
+      "showNoEventsForToday": "Vis Ingen hendelser i dag?",
+      "showFullDayProgress": "Vis fremdrift på heldagshendelse?",
+      "untilText": "Inntil tekst:",
+      "noEventText": "Hvis ingen hendelse, vis tekst:",
+      "noEventsForNextDaysText": "Ingen hendelser de nærmeste dager tekst:",
+      "fullDayEventText": "Heldagshendelse tekst:",
+      "showEventIcon": "Vis hendelsesikon",
+      "showHiddenText": "Vis skjult hendelsestekst?",
+      "hiddenEventText": "Tekst for skjulte hendelser:",
+      "horizontal": "Display horizontally"
+    }
+  },
+  "calendar": {
+    "name": "Kalendermodus",
+    "secondary": "Innstillinger for kalendermodus",
+    "fields": {
+      "showLastCalendarWeek": "Vis forrige uke",
+      "disableCalEventLink": "Fjern kalenderhendelseslenke",
+      "disableCalLocationLink": "Fjern kalenderposisjonslenke",
+      "calShowDescription": "Vis beskrivelse",
+      "disableCalLink": "Fjern kalenderlenke"
+    }
+  },
+  "appearance": {
+    "name": "Utseende",
+    "secondary": "Personlige farger, osv.",
+    "main": {
+      "name": "Hovedvalg",
+      "secondary": "Valg som virker globalt"
+    },
+    "fields": {
+      "locationLinkColor": "Farge for posjonslenke:",
+      "dimFinishedEvents": "Tone ned avsluttede hendelser?"
+    }
+  }
 }

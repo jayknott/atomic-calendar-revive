@@ -6,16 +6,14 @@
     "lib": ["es2017", "dom", "dom.iterable"],
     "noEmit": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": false,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src/*"
-, "src/locale.dayjs.ts"  ]
+  "include": ["src/*", "src/locale.dayjs.ts"]
 }
